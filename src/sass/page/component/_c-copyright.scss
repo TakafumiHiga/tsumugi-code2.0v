@@ -1,0 +1,9 @@
+@use "global" as *;
+.c-copyright {
+  background-color: #111;
+  color: $c-white;
+  text-align: center;
+  padding: rem(10);
+  font-size: rem(12);
+  display: block;
+}

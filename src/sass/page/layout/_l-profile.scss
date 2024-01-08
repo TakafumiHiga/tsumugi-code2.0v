@@ -1,0 +1,7 @@
+@use 'global' as *;
+.l-profile {
+  background: linear-gradient(to top, #4796BE 8.33%, #3E87AC 96.35%);
+  @include mq ('md'){
+    background: linear-gradient(to top, transparent 0%, transparent 0% 20%, #4796BE 8.33%, #3E87AC 96.35%); 
+  }
+}

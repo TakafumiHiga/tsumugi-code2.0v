@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- meta情報 -->
+    <title>沖縄のホームページ制作 | つむぎCODE</title>
+    <meta
+      name="description"
+      content="沖縄のホームページ制作、デザインからコーディングまで一括して対応いたします"
+    />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="沖縄のホームページ制作 | つむぎCODE" />
+    <meta property="og:url" content="http://◯◯~" />
+    <meta property="og:image" content="./assets/images/common/WP_OGP.jpg" />
+    <meta
+      property="og:site_name"
+      content="沖縄のホームページ制作 | つむぎCODE"
+    />
+    <meta
+      property="og:description"
+      content="沖縄のホームページ制作、デザインからコーディングまで一括して対応いたします"
+    />
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="./assets/images/common/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/images/common/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/common/android-chrome-192x192.png"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body id="js-body">
+    <header class="p-header">
+      <!-- マスク -->
+      <div class="p-header-menu__mask c-mask" id="js-mask"></div>
+      <nav
+        class="p-header__menu l-global-menu p-global-navi p-global-menu-vertical"
+        id="js-navi__menu"
+      >
+        <!-- トップページのロゴ -->
+        <a href="#" class="p-global-menu__logo">
+          <img class="c-logo" src="assets/images/common/logo.svg" alt="ロゴ"
+        /></a>
+        <div class="p-global-menu__pc">
+          <ul class="p-global-menu-items">
+            <li class="p-global-menu-item">
+              <a class="p-global-menu-item__link" href="#">トップ</a>
+            </li>
+            <li class="p-global-menu-item">
+              <a class="p-global-menu-item__link" href="#">会社概要</a>
+            </li>
+            <li class="p-global-menu-item menu-item-has-children">
+              <a class="p-global-menu-item__link" href="#">親メニュー</a>
+              <ul class="sub_menu">
+                <li class="menu-item">
+                  <a class="p-global-menu-item__link" href="">子メニュー</a>
+                </li>
+              </ul>
+            </li>
+            <li class="p-global-menu-item">
+              <a class="p-global-menu-item__link" href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        <!-- ハンバーガーメニュー -->
+        <a class="p-global-menu__hamburger c-hamburger" id="js-hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+          <span>MENU</span>
+        </a>
+      </nav>
+      <!-- ハンバーガーメニューの中身 -->
+      <div
+        id="js-drower"
+        class="l-drower p-drower-menu p-global-menu__mb p-drower"
+      >
+        <ul class="p-global-menu-items">
+          <li class="p-global-menu-item">
+            <a class="p-global-menu-item__link" href="#">トップ</a>
+          </li>
+          <li class="p-global-menu-item">
+            <a class="p-global-menu-item__link" href="#">会社概要</a>
+          </li>
+          <li class="p-global-menu-item menu-item-has-children">
+            <a class="p-global-menu-item__link" href="#">親メニュー</a>
+            <ul class="sub_menu">
+              <li class="menu-item">
+                <a class="p-global-menu-item__link" href="">子メニュー</a>
+              </li>
+            </ul>
+          </li>
+          <li class="p-global-menu-item">
+            <a class="p-global-menu-item__link" href="#">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="inner">
+        <section class="p-info l-container">
+          <h2>様々な情報このセクションに記録する</h2>
+          <h3>ディレクトリ画像パス</h3>
+          <p>index.html➝「assets/images/common/sample-img2.jpg」</p>
+        </section>
+        <section class="l-btn l-container">
+          <a href="#" class="c-btn-slide">ボタンです</a>
+        </section>
+        <section class="l-grid-layout l-container" id="grid-layout">
+          <h3>グリッドレイアウト</h3>
+          <h4>
+            grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));を使用
+          </h4>
+          <div class="p-grids">
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+          </div>
+          <h4 class="test-con">
+            p-gridsに子要素が1つの場合は画面いっぱいに広がります。
+          </h4>
+          <div class="p-grids">
+            <div class="p-grid">
+              <figure class="p-grid__img">
+                <img src="assets/images/common/sample-img2.jpg" alt="box" />
+              </figure>
+              <p class="p-grid__text">minmax345px aspect 2 /1</p>
+            </div>
+          </div>
+        </section>
+        <section class="linear-gradient l-container" id="linear-gradient">
+          <h2>BackgroundライナーグラディエントCSS</h2>
+          <div class="c-bg-light-brown-right">
+            <p>
+              background: linear-gradient(to right, transparent 0%, transparent
+              0% 26%, #f0e7e1 0%, #ded5cf 100%,);
+            </p>
+          </div>
+          <div class="c-bg-light-brown-left">
+            <p>
+              background: linear-gradient(to right, transparent 0%, transparent
+              0% 26%, #f0e7e1 0%, #ded5cf 100%,);
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

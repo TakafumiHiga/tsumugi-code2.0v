@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-global-menu {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  z-index: 100;
+}
+
+.p-global-menu__pc {
+  display: none;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.p-global-menu-fixed {
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.p-global-menu-items {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.p-global-menu__mb {
+  display: block;
+}
+
+@include mq("md") {
+  .p-global-menu__mb {
+    display: none;
+  }
+}
+
+.p-global-menu__logo {
+  display: block;
+  width: rem(50);
+}
+
+.p-global-menu__hamburger {
+  @include mq("md") {
+    display: none;
+  }
+}

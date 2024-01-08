@@ -1,0 +1,7 @@
+@use 'global' as *;
+
+.l-content-inner {
+  @include mq ('md'){
+    padding: 0 rem(140); 
+  }
+}

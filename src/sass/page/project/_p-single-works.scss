@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.p-single-works__imgs {
+  display: flex;
+  justify-content: center;
+}
+
+.p-single-works__pc-img:first-child {
+  margin-right: rem(24);
+  @include mq("md") {
+    margin-right: rem(40);
+  }
+}
+
+.p-single-works__img-text {
+  margin-bottom: rem(16);
+}
+
+.p-single-works__inner {
+  max-width: rem(600);
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}

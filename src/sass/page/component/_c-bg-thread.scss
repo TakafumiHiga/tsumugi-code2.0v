@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.c-bg-thread {
+  background-image: url(../../assets/images/common/thread.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: cover;
+}

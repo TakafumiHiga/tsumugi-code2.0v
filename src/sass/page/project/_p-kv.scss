@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.p-kv {
+  width: 100%;
+  position: relative;
+  height: 56vh;
+  aspect-ratio: 1200 / 800;
+  @include mq("md") {
+    height: auto;
+    max-height: 80vh;
+  }
+}
+
+.p-kv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-kv__text {
+  position: absolute;
+  top: 20%;
+  margin-left: rem(8);
+  color: $c-navy;
+  border-top: solid 1px $c-navy;
+  border-bottom: solid 1px $c-navy;
+  padding: rem(8) rem(2);
+  font-weight: $bold;
+  @include mq("md") {
+    padding: rem(16) rem(4);
+    margin-left: rem(-84);
+  }
+}
+
+.p-kv__sub-title {
+  font-size: rem(16);
+  font-weight: $semibold;
+  text-shadow: 0px 0px 2px $c-bg-gray;
+  display: block;
+}
+
+.p-kv__title {
+  font-family: $sub-font;
+  padding-bottom: rem(8);
+  margin-bottom: rem(10);
+  font-size: rem(34);
+  display: block;
+  text-shadow: $c-bg-gray 0 0 5px;
+  @include mq("md") {
+    font-size: rem(62);
+    letter-spacing: 0.1em;
+  }
+}
+
+.p-kv__sub-desc {
+  font-size: rem(12);
+  text-shadow: 0px 0px 2px $c-bg-gray;
+  display: block;
+}

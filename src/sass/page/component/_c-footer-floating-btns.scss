@@ -1,0 +1,109 @@
+@use "global" as *;
+
+.c-footer-floating-btns {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: rem(4);
+  background-color: #418cb2;
+  z-index: 100;
+  height: rem(48);
+  @include mq("md") {
+    width: rem(40);
+    flex-direction: column;
+    bottom: 33%;
+    right: 0;
+    left: initial;
+    width: rem(64);
+    height: auto;
+    justify-content: center;
+    background-color: initial;
+  }
+}
+
+.c-footer-floating-btns a:first-child {
+  margin-right: rem(10);
+  @include mq("md") {
+    margin-right: initial;
+    margin-bottom: rem(10);
+  }
+}
+
+.c-footer-floating-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: rem(14);
+  padding: 0.5em 1.2em;
+  border-radius: rem(30);
+  @include mq("md") {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: rem(16);
+    padding: 1.5em 1.2em;
+  }
+}
+
+.c-footer-floating-btn__tel {
+  color: #092533;
+  border: 1px solid $c-navy;
+  background-color: $c-white;
+}
+
+.c-footer-floating-btn__contact {
+  background: #cc2121;
+  border: 2px solid #cc2121;
+  color: #fff;
+  // padding: 0.5em 1.2em;
+  background-image: linear-gradient(
+    to bottom,
+    #cc2121 0%,
+    #c11d1d 100%,
+    #a41a1a 100%,
+    #691212 100%
+  );
+}
+
+.c-footer-floating-btn__contact span {
+  display: flex;
+  align-items: center;
+}
+
+.c-footer-floating-btn__contact span::before {
+  background-image: url(../../assets/images/common/icon_mail.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: rem(20);
+  margin-right: rem(5);
+  width: rem(20);
+  @include mq("md") {
+    margin-right: initial;
+    margin-bottom: rem(5);
+  }
+}
+
+.c-footer-floating-btn__tel span {
+  display: flex;
+  align-items: center;
+}
+
+.c-footer-floating-btn__tel span::before {
+  background-image: url(../../assets/images/common/icon_mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: rem(24);
+  margin-right: rem(5);
+  margin-right: 0.3125rem;
+  width: rem(24);
+  @include mq("md") {
+    margin-right: initial;
+    margin-bottom: rem(5);
+  }
+}

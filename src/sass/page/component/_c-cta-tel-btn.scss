@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.c-cta-tel-btn {
+  border-radius: rem(30);
+  color: #092533;
+  font-size: rem(18);
+}
+
+.c-cta-tel-btn span {
+  display: flex;
+  align-items: center;
+}
+
+.c-cta-tel-btn span::before {
+  content: "";
+  background-image: url(../../assets/images/common/icon_mobile.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: contain;
+  width: rem(24);
+  height: rem(24);
+
+  margin-right: rem(5);
+}

@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.p-global-menu-vertical {
+  background-color: $c-white;
+  position: fixed;
+  top:0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq ('md'){
+      display: block;
+      max-width: rem(120);
+      width: 100%;
+}
+}
+
+.p-global-menu-items-vertical {
+  @include mq ('md'){
+    display: block;
+  }
+}
+

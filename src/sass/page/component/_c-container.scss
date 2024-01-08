@@ -1,0 +1,9 @@
+@use "global" as *;
+.c-container {
+  margin-bottom: rem(60);
+  margin-top: rem(60);
+  @include mq("md") {
+    margin-bottom: rem(100);
+    margin-top: rem(80);
+  }
+}
