@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.p-post-item:not(:last-child) {
+  margin-bottom: rem(25);
+  @include mq("md") {
+    margin-bottom: rem(12);
+  }
+}
+
+.p-post-item__link {
+  display: block;
+  align-items: center;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.p-post-item__time {
+  font-size: rem(14);
+  color: #acacac;
+  margin-bottom: rem(10);
+  @include mq("md") {
+    margin-bottom: 0;
+    margin-right: rem(24);
+  }
+}
+
+.p-post__item-title {
+  font-weight: $bold;
+  text-decoration: underline;
+  font-size: rem(16);
+  line-height: 1.5;
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+.c-works-tags {
+  display: flex;
+}
+
+.c-works-tags {
+  display: inline-block;
+  transition: all 0.3s;
+  color: $c-gray;
+  font-size: rem(14);
+}

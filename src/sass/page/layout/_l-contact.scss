@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.l-contact {
+  margin-top: rem(80);
+  background: linear-gradient(180deg, #388AB4 0%, #25739A 80.21%);
+  padding: rem(80) 0 rem(80);
+  @include mq ('md'){
+    padding: rem(120) 0 rem(80);
+    margin-top: rem(120);
+  }
+}

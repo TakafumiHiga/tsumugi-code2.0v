@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.p-archive-post__img {
+  margin-bottom: rem(14);
+}
+
+.p-archive-post__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(10);
+}
+
+.p-archive-post__title {
+  font-family: "Noto Serif JP";
+  font-weight: $bold;
+  font-size: rem(20);
+  line-height: 1.8;
+}

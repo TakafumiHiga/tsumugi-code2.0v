@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.c-section-title {
+  text-align: center;
+  margin-bottom: rem(40);
+  @include mq("md") {
+    margin-bottom: rem(60);
+  }
+}
+
+.c-section-title h2 {
+  font-family: $sub-font;
+  font-size: rem(24);
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.c-boder__navy {
+  border-bottom: solid 1px $c-navy;
+  display: inline-block;
+  width: rem(64);
+}
+
+.c-boder__white {
+  border-bottom: solid 1px $c-white;
+  display: inline-block;
+  width: rem(64);
+}
+
+.--white {
+  color: $c-white;
+}
+
+.--navy {
+  color: $c-navy;
+}

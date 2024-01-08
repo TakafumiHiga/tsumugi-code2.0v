@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.p-profile {
+  @include mq ('md'){
+    padding-top:rem(74);
+  }
+}
+
+.p-profile__body {
+  display: flex;
+  flex-direction: column-reverse;
+  @include mq ('md'){
+    flex-direction: initial;
+    margin-bottom: rem(112);
+  }
+}
+
+.p-profile__text {
+  color: $c-white;
+}
+
+.p-profile__img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-width: rem(300);
+  height: auto;
+}
+
+.p-profile__img img {
+  height: 100%;
+  object-fit: cover;
+}

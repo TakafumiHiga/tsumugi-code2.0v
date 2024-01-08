@@ -1,0 +1,9 @@
+@use "global" as *;
+.l-kv {
+  position: relative;
+  z-index: -1;
+  @include mq("md") {
+    margin-left: auto;
+    width: calc(100vw - rem(287));
+  }
+}

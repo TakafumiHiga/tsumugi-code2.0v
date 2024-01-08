@@ -1,0 +1,25 @@
+@use 'global' as *;
+
+.c-bg-en {
+  font-family: $en-font;
+  font-weight: $bold;
+  font-size: rem(70);
+  line-height: 189px;
+  color: #D4E8F2;
+  position: absolute;
+  display: none;
+}
+
+.--plofile::before {
+  z-index: -1;
+  content: 'Plofile＆Skill';
+ width: 100%;
+  font-size: rem(70);
+  // position: absolute;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -50%);
+  @include mq ('md'){
+    font-size: rem(80);
+  }
+}
