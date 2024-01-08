@@ -96,12 +96,12 @@
 /* 前への矢印カスタマイズ */
 .p-case__swiper-prev::after {
   @include mq("md") {
-    background-image: url("../../assets/images/top/swiper_btn_prev.svg");
+    background-image: url("../../assets/images/common/swiper_btn_prev.svg");
   }
 }
 /* 次への矢印カスタマイズ */
 .p-case__swiper-next::after {
   @include mq("md") {
-    background-image: url("../../assets/images/top/swiper_btn_next.svg");
+    background-image: url("../../assets/images/common/swiper_btn_next.svg");
   }
 }
