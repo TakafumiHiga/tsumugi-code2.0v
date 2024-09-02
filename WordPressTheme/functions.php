@@ -33,7 +33,6 @@ add_action( 'after_setup_theme', 'my_setup' );
  * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
  */
 function my_script_init() {
-
 	wp_enqueue_style( 'my_style', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.0.1', 'all' );
 
 	  // Swiperのスタイルシートを追加
@@ -258,3 +257,16 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_none');
  * YubinBangoライブラリ
  */
 wp_enqueue_script( 'yubinbango', 'https://yubinbango.github.io/yubinbango/yubinbango.js', array(), null, true );
+
+
+
+/**********************************************
+* スラッグ名が日本語だったら自動的に投稿タイプ＋id付与へ変更（スラッグを設定した場合は適用しない）
+*/
+function auto_post_slug( $slug, $post_ID, $post_status, $post_type ) {
+	if ( preg_match( '/(%[0-9a-f]{2})+/', $slug ) ) {
+			$slug = utf8_uri_encode( $post_type ) . '-' . $post_ID;
+	}
+	return $slug;
+}
+add_filter( 'wp_unique_post_slug', 'auto_post_slug', 10, 4  );

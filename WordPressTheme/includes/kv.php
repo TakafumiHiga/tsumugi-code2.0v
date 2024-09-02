@@ -6,7 +6,7 @@
   <h1 class="p-kv__text">
     <span class="p-kv__sub-title">ホームページのデザイン・制作</span>
     <span class="p-kv__title">つむぎCODE</span>
-    <span class="p-kv__sub-desc">Web担当者のフタンをへらします</span>
+    <!-- <span class="p-kv__sub-desc">Web担当者のフタンをへらします</span> -->
   </h1>
 </section>
 <section class="l-top-news">

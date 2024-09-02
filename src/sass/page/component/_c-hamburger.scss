@@ -56,14 +56,8 @@
   opacity: 0;
 }
 
-// .c-hamburger .close,
-// .c-hamburger.active .open {
-//   opacity: 0;
-// }
-
 .c-hamburger__menu {
   font-size: rem(10);
-  font-family: $sub-font;
   white-space: nowrap;
   bottom: rem(3);
   left: 50%;

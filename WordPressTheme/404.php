@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<div class="l-inner">
-
-
-
 
   <section class="l-404">
     <h2 class="p-404__title">お探しのページが見つかりませんでした</h2>
@@ -22,6 +18,4 @@
     </div>
 
   </section>
-
-</div>
 <?php get_footer(); ?>

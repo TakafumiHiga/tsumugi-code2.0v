@@ -41,5 +41,4 @@
   </div>
   <div class="swiper-button-next p-case__swiper-next"></div>
   <div class="swiper-button-prev p-case__swiper-prev"></div>
-
 </div>

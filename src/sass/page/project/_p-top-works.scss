@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.p-top-works {
+  margin-bottom: rem(40);
+  @include mq("md") {
+    margin-bottom: rem(80);
+  }
+}
+
+.p-top-works__title {
+  font-weight: 500;
+}
+
 .p-top-works__item {
   position: relative;
   display: flex;
@@ -32,6 +43,29 @@
   flex: 1;
 }
 
+.p-top-works__pc-img::after {
+  content: "";
+  height: 23px;
+  height: 1.4375rem;
+  width: 168px;
+  width: 10.5rem;
+  border-radius: 0;
+  position: absolute;
+  top: 102%;
+  left: 26%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(173, 173, 173, 0.56) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  -webkit-animation: expansion 1.5s cubic-bezier(0.55, 0.19, 0.44, 0.79) 0s
+    infinite alternate;
+  animation: expansion 1.5s cubic-bezier(0.55, 0.19, 0.44, 0.79) 0s infinite
+    alternate;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
 .p-top-works__pc-img-wrap {
   background: #000;
   overflow: scroll;
@@ -44,7 +78,7 @@
 
 .p-top-works__sp-img {
   aspect-ratio: 78 / 148;
-  width: 50%;
+  width: 30%;
   max-width: rem(140);
   background-image: url(../../assets/images/common/mobile-moc.svg);
   background-position: center center;
@@ -54,12 +88,37 @@
   position: relative;
   z-index: 1;
   @include mq("md") {
+    width: 50%;
   }
+}
+
+.p-top-works__sp-img-wrap::after {
+  content: "";
+  height: 23px;
+  height: 1.4375rem;
+  width: 168px;
+  width: 10.5rem;
+  border-radius: 0;
+  position: absolute;
+  top: 102%;
+  left: 26%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(173, 173, 173, 0.56) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  -webkit-animation: expansion 1.5s cubic-bezier(0.55, 0.19, 0.44, 0.79) 0s
+    infinite alternate;
+  animation: expansion 1.5s cubic-bezier(0.55, 0.19, 0.44, 0.79) 0s infinite
+    alternate;
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 
 .p-top-works__sp-img-wrap {
   background: #fff;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: absolute;
   top: 10.7%;
   left: 12.7%;
@@ -86,5 +145,9 @@
 }
 
 .p-top-works_btn-wrap {
+  text-align: center;
+}
+
+.p-top-works__bottom-btn-wrap {
   text-align: center;
 }

@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.c-btn-arrow {
+  width: 100%;
+  align-content: center;
+  color: $c-navy;
+  border: 1px solid $c-navy;
+  position: relative;
+  display: inline-block;
+  border-radius: rem(30);
+}
+.c-btn-arrow:hover {
+  opacity: initial;
+}
+
+.c-btn-arrow::after {
+  content: "";
+  background-image: url(../../assets/images/common/more-arrow.svg);
+  transition: all 0.2s;
+  background-position: 90% 50%; /* 重複しているこの行を削除 */
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: contain;
+  width: rem(28);
+  height: rem(15);
+  color: $c-navy;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+.c-btn-arrow:hover::after {
+  right: -7%;
+}

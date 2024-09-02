@@ -40,14 +40,14 @@
       </a>
     </div>
     <!-- ハンバーガーメニューの中身 -->
-    <div id="js-drower" class="l-drower p-drower inner">
+    <div id="js-drower" class="l-drower c-drower inner">
       <?php 
           wp_nav_menu(array(
           'theme_location' => 'global',
           'container' => 'div',
-          'container_id'    => 'p-drower__container',
+          'container_id'    => 'c-drower__container',
           'depth' => 2,
-          'container_class' => 'p-drower__container',
+          'container_class' => 'c-drower__container',
           'menu_id'         => 'p-global-menu-items',
           'menu_class' => 'p-global-menu-items', // ulのclass名
           'add_li_class' => 'p-global-menu-item', // liタグへclass追加
