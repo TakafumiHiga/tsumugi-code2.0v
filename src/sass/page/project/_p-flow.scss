@@ -20,13 +20,14 @@
 
 .p-flow-card:not(:last-child)::before {
   content: "";
+  background-color: #cc2121;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  height: rem(20);
+  width: rem(50);
   position: absolute;
-  left: rem(40);
-  background-color: #dfdfdf;
-  width: rem(2);
-  height: 100%;
-  top: 53%;
-  height: 100%;
+  bottom: rem(-45);
+  left: 50%;
+  transform: translateY(-50%);
 }
 
 .p-flow-card__no {
@@ -47,7 +48,6 @@
   margin-right: rem(-30);
   z-index: 1;
 }
-
 
 .p-flow-card__step {
   font-size: rem(10);

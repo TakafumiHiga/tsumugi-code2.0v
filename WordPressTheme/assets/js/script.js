@@ -28,9 +28,11 @@ jQuery(function ($) {
 
   // ハンバーガーメニュー
   $("#js-hamburger").click(function () {
-    $(".p-drower").toggleClass("open");
+	    console.log("Hamburger clicked"); // この行を追加
+    $("#js-drower").toggleClass("open");
+	 console.log("Drawer class after toggle:", $("#js-drower").attr("class")); // この行を追加
     $("body").toggleClass("is-fixed");
-    $(".c-hamburger").toggleClass("active"); // この行を再度追加
+    $("#js-hamburger").toggleClass("active"); // この行を再度追加
   });
 
   $(document).on("click", 'a[href*="#"]', function () {
@@ -53,7 +55,7 @@ jQuery(function ($) {
       time,
       "swing",
       function () {
-        $(".p-drower").removeClass("open");
+        $(".c-drower").removeClass("open");
         $(".c-hamburger").removeClass("active");
       }
     );

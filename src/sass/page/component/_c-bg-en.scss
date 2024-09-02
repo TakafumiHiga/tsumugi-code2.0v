@@ -1,25 +1,71 @@
-@use 'global' as *;
+@use "global" as *;
 
 .c-bg-en {
   font-family: $en-font;
   font-weight: $bold;
   font-size: rem(70);
-  line-height: 189px;
-  color: #D4E8F2;
-  position: absolute;
-  display: none;
+  color: #d4e8f266;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  @include mq("md") {
+    font-size: rem(140);
+  }
 }
 
-.--plofile::before {
-  z-index: -1;
-  content: 'Plofile＆Skill';
- width: 100%;
+.--bg-works:before {
   font-size: rem(70);
-  // position: absolute;
-  top: 50%;
+  position: absolute;
+  z-index: -1;
+  content: "Works";
+  top: rem(-57);
+  left: 0;
+  @include mq("md") {
+    top: rem(-118);
+    font-size: rem(140);
+  }
+}
+
+.--bg-plofile::before {
+  font-size: rem(54);
+  position: absolute;
+  content: "Plofile＆Skill";
+  position: absolute;
+  top: rem(-24);
   left: 50%;
-  // transform: translate(-50%, -50%);
-  @include mq ('md'){
-    font-size: rem(80);
+  transform: translateX(-50%);
+
+  @include mq("md") {
+    font-size: rem(140);
+    top: rem(-189);
+    right: 0;
+    left: initial;
+    transform: initial;
+  }
+}
+
+.--bg-flow::before {
+  font-size: rem(70);
+  position: absolute;
+  z-index: -1;
+  content: "Flow";
+  top: rem(-57);
+  left: 0;
+  @include mq("md") {
+    top: rem(-118);
+    font-size: rem(140);
+  }
+}
+
+.--bg-faq::before {
+  font-size: rem(70);
+  position: absolute;
+  z-index: -1;
+  content: "FAQ";
+  top: rem(-57);
+  right: 0;
+  @include mq("md") {
+    top: rem(-118);
+    font-size: rem(140);
   }
 }

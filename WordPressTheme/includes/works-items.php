@@ -1,3 +1,4 @@
+<p>※その他未公開の制作事例が多数ございます。</p>
 <div class="p-top-works p-grids">
   <!-- https://www.sanzen-design.jp/works -->
   <?php
@@ -18,31 +19,29 @@
 
       <!-- タームを取得 -->
       <div class="c-works-tags p-top-work__meta">
-        <?php
-                    $taxonomies = 'works-cat';
-                    $args = array(
-                      'hide_empty'    => true, //投稿に紐づいていないタームは出力しない
-                      'order' => 'ASC', //昇順
-                      'orderby' => 'menu_order' //管理画面の並び順通りにする
-                    );
-                    $tax_news_terms = get_terms($taxonomies, $args);
-                    foreach ($tax_news_terms as $term) :
-                      $term_name = $term->name;
-                      $term_slug = $term->slug;
-                      $term_link = get_term_link($term_slug, $taxonomies)
-                    ?>
-        <a class="c-works-tag" href="<?php echo $term_link; ?>">#<?php echo $term_name; ?></a>
-        <?php endforeach; ?>
+        <?php // 投稿に紐づくタームの一覧を表示
+          $taxonomy_slug = 'works-cat'; // 任意のタクソノミースラッグを指定
+          $category_terms = wp_get_object_terms($post->ID, $taxonomy_slug); // タームの情報を取得
+          if(!empty($category_terms)){ // 変数が空でなければ true
+            if(!is_wp_error($category_terms)){ // 変数が WordPress Error でなければ true
+              echo '<div class="c-works-tags p-top-work__meta">';
+              foreach($category_terms as $category_term){ // タームのループを開始
+                echo '<a class="c-works-tag" href="'.get_term_link($category_term->slug, $taxonomy_slug).'">#'.$category_term->name.'</a>'; // タームをリンク付きで表示
+              } // ループの終了
+              echo '</div>';
+            }
+          }
+      ?>
       </div>
     </div>
     <div class="p-top-works__img">
       <?php 
-$pc_img_id = get_post_meta($post->ID , 'work_img_pc' ,true);
-$sp_img_id = get_post_meta($post->ID , 'work_img_sp' ,true);
+    $pc_img_id = get_post_meta($post->ID , 'work_img_pc' ,true);
+    $sp_img_id = get_post_meta($post->ID , 'work_img_sp' ,true);
 
-if ($pc_img_id) {
-  $pc_img = wp_get_attachment_image_src($pc_img_id, 'full');
-  ?>
+    if ($pc_img_id) {
+      $pc_img = wp_get_attachment_image_src($pc_img_id, 'full');
+      ?>
 
       <figure class="p-top-works__pc-img">
         <div class="p-top-works__pc-img-wrap">
@@ -65,7 +64,7 @@ if ($pc_img_id) {
       <?php } ?>
     </div>
     <div class="p-top-works_btn-wrap">
-      <a class="c-btn-slide" href="<?php the_permalink(); ?>">詳しく見る</a>
+      <a class="c-btn-arrow --small" href="<?php the_permalink(); ?>">詳しく見る</a>
     </div>
   </article>
   <?php endwhile;?>

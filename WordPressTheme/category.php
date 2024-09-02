@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="inner c-container">
+<div class="l-inner c-container">
   <div class="c-post-wrap">
     <ul class="p-post-list-items">
       <!-- ループの開始 -->

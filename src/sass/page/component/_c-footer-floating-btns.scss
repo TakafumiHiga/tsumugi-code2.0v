@@ -8,7 +8,7 @@
   right: 0;
   left: 0;
   padding: rem(4);
-  background-color: #418cb2;
+  background-color: #ffffff90;
   z-index: 100;
   height: rem(48);
   @include mq("md") {
@@ -25,7 +25,7 @@
 }
 
 .c-footer-floating-btns a:first-child {
-  margin-right: rem(10);
+  margin-right: rem(5);
   @include mq("md") {
     margin-right: initial;
     margin-bottom: rem(10);
@@ -37,27 +37,26 @@
   justify-content: center;
   width: 100%;
   font-size: rem(14);
-  padding: 0.5em 1.2em;
+  padding: 0.5em;
   border-radius: rem(30);
   @include mq("md") {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-size: rem(16);
-    padding: 1.5em 1.2em;
+    padding: 1.5em 0.8em;
   }
 }
 
 .c-footer-floating-btn__tel {
-  color: #092533;
+  color: $c-white;
   border: 1px solid $c-navy;
-  background-color: $c-white;
+  background-color: $c-navy;
 }
 
 .c-footer-floating-btn__contact {
   background: #cc2121;
   border: 2px solid #cc2121;
   color: #fff;
-  // padding: 0.5em 1.2em;
   background-image: linear-gradient(
     to bottom,
     #cc2121 0%,
@@ -93,7 +92,7 @@
 }
 
 .c-footer-floating-btn__tel span::before {
-  background-image: url(../../assets/images/common/icon_mobile.svg);
+  background-image: url(../../assets/images/common/icon_mobile_white.svg);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";

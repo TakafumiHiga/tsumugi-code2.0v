@@ -15,7 +15,7 @@
 
     <?php if ( $the_query->have_posts() ): ?>
     <?php while($the_query->have_posts()):$the_query->the_post(); ?>
-    <span class="tag"><?php echo $cat;?></span>
+    <span class="tag"><?php echo get_the_category()[0]->name; ?></span>
     <a href="<?php the_permalink(); ?>" class="">
       <figure class="">
 
@@ -25,10 +25,10 @@
                 else:?>
 
         <!-- 画像がなかった時の表示 -->
-        <img src="<?php echo esc_url(get_theme_file_uri('/')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('/')); ?>" alt="ロゴ">
         <?php endif;?>
       </figure>
-      <p class=""><?php echo mb_substr($post-> post_title, 0, 38).''; ?>
+      <p class=""><?php echo mb_substr($post->post_title, 0, 38).''; ?>
       </p>
     </a>
     <?php endwhile; ?>
@@ -51,7 +51,7 @@
           ?>
   </div>
   <div class="p-top-blog__link">
-    <a class="" href="<?php bloginfo('url'); ?>/">Topへ戻る</a>
+    <a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>">Topへ戻る</a>
   </div>
   <?php get_template_part('includes/pagenavi'); ?>
 </div>

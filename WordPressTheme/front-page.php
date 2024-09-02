@@ -1,15 +1,19 @@
 <?php get_header(); ?>
-<div class="c-bg-en">WORKS</div>
 <section class="l-top-works l-wrap" id="works">
   <div class="inner">
+    <div class="c-bg-en --bg-works">
+    </div>
     <div class="c-section-title">
       <h2>制作実績</h2><span class="c-boder__navy"></span>
     </div>
     <?php get_template_part('includes/works-items'); ?>
   </div>
+  <div class="p-top-works__bottom-btn-wrap">
+    <a class="c-btn c-btn-arrow --big" href="<?php echo esc_url( home_url( '/works' ) ); ?>">制作事例一覧を見る</a>
+  </div>
 </section>
-<section class="l-profile l-container p-profile l-wrap">
-  <div class="c-bg-en --plofile"></div>
+<section class="l-profile l-container p-profile l-wrap" id="profile">
+  <div class="c-bg-en --bg-plofile"></div>
   <div class="inner">
     <div class="l-content-inner">
       <div class="c-section-title --white">
@@ -31,7 +35,7 @@
   </div>
 
   <div class="inner">
-    <div class="p-profile-cards p-profile__bottom">
+    <div class="p-profile-cards p-profile__bottom" id="skill">
       <article class="p-profile-card">
         <figure class="p-profile-card__hearing p-profile-card__img">
           <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/hearing.svg')); ?>" alt="矢印のアイコン">
@@ -61,6 +65,7 @@
   </div>
 </section>
 <section class="l-flow l-container p-flow inner" id="flow">
+  <div class="c-bg-en --bg-flow"></div>
   <div class="c-section-title">
     <h2>制作の流れ</h2><span class="c-boder__navy"></span>
   </div>
@@ -84,7 +89,7 @@
         <p class="p-flow-card__desc">お客様の要件に基づいて、初期のデザインコンセプトを作成します。提案されたデザインについてのフィードバックを受け、必要に応じて改善を行います。</p>
         <div class="p-flow-card__bottom">
           <figure class="p-flow-card__bottom-img"><img
-              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow1.svg')); ?>" alt=""></figure>
+              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow2.svg')); ?>" alt=""></figure>
         </div>
       </div>
     </li>
@@ -92,10 +97,11 @@
       <div class="p-flow-card__no"><span class="p-flow-card__step">STEP</span>03</div>
       <div class="p-flow-card__text">
         <h3 class="p-flow-card__title">ウェブサイトの開発と実装</h3>
-        <p class="p-flow-card__desc">デザインが承認された後、ウェブサイトの開発に着手します。この段階では、HTML/CSSコーディング、CMSの設定、必要に応じてカスタムプログラミングを行います</p>
+        <p class="p-flow-card__desc">デザインが承認された後、ウェブサイトの開発に着手します。この段階では、HTML/CSSコーディング、CMSの設定、必要に応じてカスタムプログラミングを行います
+        </p>
         <div class="p-flow-card__bottom">
           <figure class="p-flow-card__bottom-img"><img
-              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow1.svg')); ?>" alt=""></figure>
+              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow3.svg')); ?>" alt=""></figure>
         </div>
       </div>
     </li>
@@ -104,10 +110,11 @@
       <div class="p-flow-card__text">
         <h3 class="p-flow-card__title">品質保証とテスト</h3>
         <p class="p-flow-card__desc">
-          サイトが完成すると、綿密なテストを行い、全てのリンクが正しく機能しているか、レスポンシブデザインが全てのデバイスで適切に表示されるかを確認します。また、ロード速度の最適化とSEO基準の遵守もこの段階で確認します。</p>
+          サイトが完成すると、綿密なテストを行い、全てのリンクが正しく機能しているか、レスポンシブデザインが全てのデバイスで適切に表示されるかを確認します。また、ロード速度の最適化とSEO基準の遵守もこの段階で確認します。
+        </p>
         <div class="p-flow-card__bottom">
           <figure class="p-flow-card__bottom-img"><img
-              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow1.svg')); ?>" alt=""></figure>
+              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow4.svg')); ?>" alt=""></figure>
         </div>
       </div>
     </li>
@@ -119,13 +126,14 @@
         </p>
         <div class="p-flow-card__bottom">
           <figure class="p-flow-card__bottom-img"><img
-              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow1.svg')); ?>" alt=""></figure>
+              src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/flow5.svg')); ?>" alt=""></figure>
         </div>
       </div>
     </li>
   </ul>
 </section>
 <section class="l-faq l-container inner l-wrap">
+  <div class="c-bg-en --bg-faq"></div>
   <div class="c-section-title">
     <h2>よくあるご質問</h2><span class="c-boder__navy"></span>
   </div>
